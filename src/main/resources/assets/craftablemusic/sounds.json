@@ -1,0 +1,11 @@
+{
+  "efn_music": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "craftablemusic:music/vrigger_efn",
+        "stream": true
+      }
+    ]
+  }
+}
