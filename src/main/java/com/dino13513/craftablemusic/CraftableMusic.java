@@ -1,6 +1,9 @@
 package com.dino13513.craftablemusic;
 
 import com.dino13513.craftablemusic.item.ModItems;
+import com.dino13513.craftablemusic.sound.ModSounds;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -45,6 +48,8 @@ public class CraftableMusic {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+
+        ModSounds.register(modEventBus);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -58,7 +63,9 @@ public class CraftableMusic {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.EFNDISC);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

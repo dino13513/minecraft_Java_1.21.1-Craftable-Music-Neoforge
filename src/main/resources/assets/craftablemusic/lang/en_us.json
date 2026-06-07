@@ -1,13 +1,3 @@
 {
-  "itemGroup.craftablemusic": "Example Mod Tab",
-  "block.craftablemusic.example_block": "Example Block",
-  "item.craftablemusic.example_item": "Example Item",
-
-  "craftablemusic.configuration.title": "Craftable Music Configs",
-  "craftablemusic.configuration.section.craftablemusic.common.toml": "Craftable Music Configs",
-  "craftablemusic.configuration.section.craftablemusic.common.toml.title": "Craftable Music Configs",
-  "craftablemusic.configuration.items": "Item List",
-  "craftablemusic.configuration.logDirtBlock": "Log Dirt Block",
-  "craftablemusic.configuration.magicNumberIntroduction": "Magic Number Text",
-  "craftablemusic.configuration.magicNumber": "Magic Number"
+  "item.craftablemusic.efn_music_disc": "Efn Music Disc"
 }

@@ -12,7 +12,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(CraftableMusic.MOD_ID);
 
-    public static final DeferredItem<Item> EFNDISK = ITEMS.register("efn_music_disc",
+    public static final DeferredItem<Item> EFNDISC = ITEMS.register("efn_music_disc",
             () -> new Item(new Item.Properties()
                     .stacksTo(1)
                     .jukeboxPlayable(ResourceKey.create(
