@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "craftablemusic:nword"
+    },
+    {
+      "item": "craftablemusic:epstein"
+    },
+    {
+      "item": "craftablemusic:empty_vinyl"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "craftablemusic:efn_music_disc"
+  }
+}

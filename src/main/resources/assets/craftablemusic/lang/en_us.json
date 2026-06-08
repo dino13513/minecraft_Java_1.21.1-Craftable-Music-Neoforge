@@ -1,3 +1,8 @@
 {
-  "item.craftablemusic.efn_music_disc": "Efn Music Disc"
+  "item.craftablemusic.efn_music_disc": "Efn Music Disc",
+  "item.craftablemusic.jazz_fnaf_music_disc": "Fnaf Jazz Music Disc",
+  "item.craftablemusic.empty_vinyl": "Empty Vinyl",
+  "item.craftablemusic.epstein": "Epstein",
+  "item.craftablemusic.nword": "Nword",
+  "creativetab.craftablemusic.custom_music_discs": "Craftable Music"
 }

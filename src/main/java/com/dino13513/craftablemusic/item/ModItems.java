@@ -22,6 +22,35 @@ public class ModItems {
             )
     );
 
+    public static final DeferredItem<Item> JAZZFNAFDISC = ITEMS.register("jazz_fnaf_music_disc",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(1)
+                    .jukeboxPlayable(ResourceKey.create(
+                            Registries.JUKEBOX_SONG,
+                            ResourceLocation.fromNamespaceAndPath(CraftableMusic.MOD_ID, "jazz_fnaf")
+                    ))
+            )
+    );
+
+    public static final DeferredItem<Item> EMPTYVINYL = ITEMS.register("empty_vinyl",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(1)
+
+            )
+    );
+
+    public static final DeferredItem<Item> EPSTEIN = ITEMS.register("epstein",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(64)
+            )
+    );
+
+    public static final DeferredItem<Item> NWORD = ITEMS.register("nword",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(64)
+            )
+    );
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

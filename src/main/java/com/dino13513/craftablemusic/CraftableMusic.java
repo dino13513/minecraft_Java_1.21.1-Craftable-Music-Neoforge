@@ -1,5 +1,7 @@
 package com.dino13513.craftablemusic;
 
+import com.dino13513.craftablemusic.block.ModBlocks;
+import com.dino13513.craftablemusic.item.ModCreativeModeTabs;
 import com.dino13513.craftablemusic.item.ModItems;
 import com.dino13513.craftablemusic.sound.ModSounds;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -47,7 +49,10 @@ public class CraftableMusic {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         ModSounds.register(modEventBus);
         // Register the item to a creative tab
@@ -65,6 +70,10 @@ public class CraftableMusic {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.EFNDISC);
+            event.accept(ModItems.JAZZFNAFDISC);
+            event.accept(ModItems.EMPTYVINYL);
+            event.accept(ModItems.EPSTEIN);
+            event.accept(ModItems.NWORD);
         }
     }
 

@@ -18,6 +18,11 @@ public class ModSounds {
             () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(CraftableMusic.MOD_ID, "vrigger_efn"))
     );
 
+    public static final DeferredHolder<SoundEvent, SoundEvent> JAZZ_FNAF = SOUND_EVENTS.register(
+            "jazz_fnaf",
+            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(CraftableMusic.MOD_ID, "jazz_fnaf"))
+    );
+
     public static void register(IEventBus eventBus) {
         SOUND_EVENTS.register(eventBus);
     }

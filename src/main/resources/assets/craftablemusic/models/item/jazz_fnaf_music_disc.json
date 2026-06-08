@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "craftablemusic:item/jazz_fnaf_music_disc"
+  }
+}
