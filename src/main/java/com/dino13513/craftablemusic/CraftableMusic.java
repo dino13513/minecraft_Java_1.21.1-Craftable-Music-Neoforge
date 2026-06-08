@@ -71,9 +71,21 @@ public class CraftableMusic {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.EFNDISC);
             event.accept(ModItems.JAZZFNAFDISC);
+            event.accept(ModItems.POLISH1);
+            event.accept(ModItems.POLISH2);
+            event.accept(ModItems.KEEMSTARMUSICDISC);
             event.accept(ModItems.EMPTYVINYL);
             event.accept(ModItems.EPSTEIN);
             event.accept(ModItems.NWORD);
+            event.accept(ModItems.WHITEGUY);
+            event.accept(ModItems.POLISHFLAG);
+            event.accept(ModItems.POLISHGUY);
+            event.accept(ModItems.AUSTRALIANFLAG);
+            event.accept(ModItems.AUSTRALIANPAINTER);
+            event.accept(ModItems.GERMANFLAG);
+            event.accept(ModItems.AUSTRALIAGUY);
+
+            event.accept(ModItems.BEER);
         }
     }
 

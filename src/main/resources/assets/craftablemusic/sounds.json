@@ -16,5 +16,32 @@
         "stream": true
       }
     ]
+  },
+  "alan_aztec_polska": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "craftablemusic:music/alan_aztec_polska",
+        "stream": true
+      }
+    ]
+  },
+  "veegas_piwo_paliwo": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "craftablemusic:music/veegas_piwo_paliwo",
+        "stream": true
+      }
+    ]
+  },
+  "keemstar_says_it_for_the_3rd_time": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "craftablemusic:music/keemstar_says_it_for_the_3rd_time",
+        "stream": true
+      }
+    ]
   }
 }

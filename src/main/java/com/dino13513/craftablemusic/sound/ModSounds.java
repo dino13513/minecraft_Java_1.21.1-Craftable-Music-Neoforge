@@ -22,6 +22,18 @@ public class ModSounds {
             "jazz_fnaf",
             () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(CraftableMusic.MOD_ID, "jazz_fnaf"))
     );
+    public static final DeferredHolder<SoundEvent, SoundEvent> AlanAztecPolska = SOUND_EVENTS.register(
+            "alan_aztec_polska",
+            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(CraftableMusic.MOD_ID, "alan_aztec_polska"))
+    );
+    public static final DeferredHolder<SoundEvent, SoundEvent> VeegasPiwoPaliwo = SOUND_EVENTS.register(
+            "veegas_piwo_paliwo",
+            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(CraftableMusic.MOD_ID, "veegas_piwo_paliwo"))
+    );
+    public static final DeferredHolder<SoundEvent, SoundEvent> KEEMSTAR3RD = SOUND_EVENTS.register(
+            "keemstar_says_it_for_the_3rd_time",
+            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(CraftableMusic.MOD_ID, "keemstar_says_it_for_the_3rd_time"))
+    );
 
     public static void register(IEventBus eventBus) {
         SOUND_EVENTS.register(eventBus);

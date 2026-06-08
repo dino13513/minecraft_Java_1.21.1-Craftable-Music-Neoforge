@@ -1,0 +1,8 @@
+{
+  "sound_event": "craftablemusic:keemstar_says_it_for_the_3rd_time",
+  "description": {
+    "text": "Keemstar says it for the 3rd time"
+  },
+  "length_in_seconds": 40,
+  "comparator_output": 15
+}

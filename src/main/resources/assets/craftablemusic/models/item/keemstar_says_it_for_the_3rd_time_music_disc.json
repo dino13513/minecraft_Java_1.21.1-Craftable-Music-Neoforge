@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "craftablemusic:item/keemstar_says_it_for_the_3rd_time_music_disc"
+  }
+}

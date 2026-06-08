@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "craftablemusic:white_guy"
+    },
+    {
+      "item": "craftablemusic:polish_flag"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "craftablemusic:polish_guy"
+  }
+}

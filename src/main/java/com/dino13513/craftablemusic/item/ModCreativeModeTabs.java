@@ -20,9 +20,20 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.EFNDISC);
                         output.accept(ModItems.JAZZFNAFDISC);
+                        output.accept(ModItems.POLISH1);
+                        output.accept(ModItems.POLISH2);
+                        output.accept(ModItems.KEEMSTARMUSICDISC);
                         output.accept(ModItems.EMPTYVINYL);
                         output.accept(ModItems.EPSTEIN);
                         output.accept(ModItems.NWORD);
+                        output.accept(ModItems.WHITEGUY);
+                        output.accept(ModItems.POLISHFLAG);
+                        output.accept(ModItems.POLISHGUY);
+                        output.accept(ModItems.AUSTRALIANFLAG);
+                        output.accept(ModItems.AUSTRALIANPAINTER);
+                        output.accept(ModItems.GERMANFLAG);
+                        output.accept(ModItems.AUSTRALIAGUY);
+                        output.accept(ModItems.BEER);
                     })
                     .build());
 
