@@ -1,9 +1,28 @@
+!!WARNING!!
+THIS MOD WAS MADE PURELY FOR LEARNING AND AS A JOKE.
+IT IS NOT MEANT TO OFFEND OR MAKE SOMEONE MAD. 
+IF YOU DON'T LIKE OR ARE OFFENDED BY THE MOD OR FEATURE OF IT YOU HAVE 3 OPTIONS:
+1.Dont play the mod
+2.Avoid the unwanted feature while playing
+3.modify the mod to delete or change unwanted features
+!!WARNING!!
+
+Craftable Music aims to add crafting recipes for all vanilla music discs and add more.
+The mod features will or arledy include:
+1.Forever jukebox - as soon as a song ends it is replayed from the start until the disc is removed from the block
+2.Vanilla recipes - recipes to craft the vanilla discs
+3.More discs - additional discs to increase music variety(as i said i allow modifying the code to delete unwanted ones, i migh also add a settings file to disable/enable them in more completed versions of the mod)
+
+
+
+
+
 
 Installation information
 =======
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
+This Mod repository can be directly cloned to get you started with a new
+fork of the mod. Simply create a new repository cloned from this one, by following the
 instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
 
 Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
