@@ -1,7 +1,8 @@
 package com.dino13513.craftablemusic.item;
 
 import com.dino13513.craftablemusic.CraftableMusic;
-import net.minecraft.core.registries.Registries; // Make sure this import is exactly like this
+import com.dino13513.craftablemusic.sound.ModSounds;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
@@ -9,9 +10,22 @@ import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import com.dino13513.craftablemusic.item.custom.MusicalItem;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(CraftableMusic.MOD_ID);
+
+    private static DeferredItem<Item> registerDisc(String name) {
+        return ITEMS.register(name + "_music_disc",
+                () -> new Item(new Item.Properties()
+                        .stacksTo(1)
+                        .jukeboxPlayable(ResourceKey.create(
+                                Registries.JUKEBOX_SONG,
+                                ResourceLocation.fromNamespaceAndPath(CraftableMusic.MOD_ID, name)
+                        ))
+                )
+        );
+    }
 
     public static final DeferredItem<Item> EFNDISC = ITEMS.register("efn_music_disc",
             () -> new Item(new Item.Properties()
@@ -59,6 +73,8 @@ public class ModItems {
                     ))
             )
     );
+
+    public static final DeferredItem<Item> ERIKAMUSICDISC = registerDisc("erika");
 
     public static final DeferredItem<Item> EMPTYVINYL = ITEMS.register("empty_vinyl",
             () -> new Item(new Item.Properties()
@@ -113,6 +129,11 @@ public class ModItems {
                         .stacksTo(64)
                 )
         );
+    public static final DeferredItem<Item> HITLER = ITEMS.register("hitler",
+                () -> new Item(new Item.Properties()
+                        .stacksTo(64)
+                )
+        );
     public static final DeferredItem<Item> BEER = ITEMS.register("beer",
             () -> new com.dino13513.craftablemusic.item.BeerItem(new Item.Properties()
                     .stacksTo(8)
@@ -124,6 +145,25 @@ public class ModItems {
                     )
             )
     );
+
+    public static final DeferredItem<Item> FREDDYFAZBEAR = ITEMS.register("freddyfazbear",
+            () -> new MusicalItem(
+                    new Item.Properties().stacksTo(1),
+                    ModSounds.FREDDYFAZBEAR,
+                    5.0f,
+                    1.0f
+            )
+    );
+    public static final DeferredItem<Item> SAXOPHONE= ITEMS.register("saxophone",
+            () -> new MusicalItem(
+                    new Item.Properties().stacksTo(1),
+                    ModSounds.SAXOPHONE,
+                    3.5f,
+                    1.0f
+            )
+    );
+
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

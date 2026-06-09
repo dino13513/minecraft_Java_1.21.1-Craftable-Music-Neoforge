@@ -43,5 +43,41 @@
         "stream": true
       }
     ]
+  },
+  "freddyfazbear": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "craftablemusic:music/freddyfazbear",
+        "stream": true
+      }
+    ]
+  },
+  "freddyfazbear_remix": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "craftablemusic:music/freddyfazbear_remix",
+        "stream": true
+      }
+    ]
+  },
+  "erika": {
+    "caterogy": "record",
+    "sounds": [
+      {
+        "name": "craftablemusic:music/erika",
+        "stream": true
+      }
+    ]
+  },
+  "saxophone": {
+    "caterogy": "record",
+    "sounds": [
+      {
+        "name": "craftablemusic:music/saxophone",
+        "stream": true
+      }
+    ]
   }
 }

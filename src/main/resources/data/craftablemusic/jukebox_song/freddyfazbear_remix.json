@@ -1,0 +1,8 @@
+{
+  "sound_event": "craftablemusic:freddyfazbear_remix",
+  "description": {
+    "text": "goldensurfer - Is this Freddy Fazbear?"
+  },
+  "length_in_seconds": 125,
+  "comparator_output": 15
+}

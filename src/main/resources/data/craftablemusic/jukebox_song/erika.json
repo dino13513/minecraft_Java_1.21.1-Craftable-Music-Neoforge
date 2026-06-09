@@ -1,0 +1,8 @@
+{
+  "sound_event": "craftablemusic:erika",
+  "description": {
+    "text": "Erika"
+  },
+  "length_in_seconds": 180,
+  "comparator_output": 15
+}

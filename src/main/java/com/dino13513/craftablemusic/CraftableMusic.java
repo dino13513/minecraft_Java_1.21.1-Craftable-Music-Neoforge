@@ -6,6 +6,7 @@ import com.dino13513.craftablemusic.item.ModItems;
 import com.dino13513.craftablemusic.sound.ModSounds;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
+import net.neoforged.fml.config.ModConfigs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -74,6 +75,7 @@ public class CraftableMusic {
             event.accept(ModItems.POLISH1);
             event.accept(ModItems.POLISH2);
             event.accept(ModItems.KEEMSTARMUSICDISC);
+            event.accept(ModItems.ERIKAMUSICDISC);
             event.accept(ModItems.EMPTYVINYL);
             event.accept(ModItems.EPSTEIN);
             event.accept(ModItems.NWORD);
@@ -82,9 +84,11 @@ public class CraftableMusic {
             event.accept(ModItems.POLISHGUY);
             event.accept(ModItems.AUSTRALIANFLAG);
             event.accept(ModItems.AUSTRALIANPAINTER);
+            event.accept(ModItems.HITLER);
             event.accept(ModItems.GERMANFLAG);
             event.accept(ModItems.AUSTRALIAGUY);
-
+            event.accept(ModItems.FREDDYFAZBEAR);
+            event.accept(ModItems.SAXOPHONE);
             event.accept(ModItems.BEER);
         }
     }
