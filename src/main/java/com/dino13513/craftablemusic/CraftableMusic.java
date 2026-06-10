@@ -50,6 +50,7 @@ public class CraftableMusic {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        NeoForge.EVENT_BUS.addListener(com.dino13513.craftablemusic.ModCommands::onRegisterCommands);
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
@@ -60,7 +61,7 @@ public class CraftableMusic {
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        modContainer.registerConfig(ModConfig.Type.SERVER, Config.SPEC);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
@@ -76,6 +77,7 @@ public class CraftableMusic {
             event.accept(ModItems.POLISH2);
             event.accept(ModItems.KEEMSTARMUSICDISC);
             event.accept(ModItems.ERIKAMUSICDISC);
+            event.accept(ModItems.REDSUNMUSICDISC);
             event.accept(ModItems.EMPTYVINYL);
             event.accept(ModItems.EPSTEIN);
             event.accept(ModItems.NWORD);
@@ -90,6 +92,14 @@ public class CraftableMusic {
             event.accept(ModItems.FREDDYFAZBEAR);
             event.accept(ModItems.SAXOPHONE);
             event.accept(ModItems.BEER);
+            event.accept(ModItems.TIKTOK);
+            event.accept(ModItems.TIKTOKRED);
+            event.accept(ModItems.TIKTOKBLACK);
+            event.accept(ModItems.TIKTOKBLUE);
+            event.accept(ModItems.CHINAFLAG);
+            event.accept(ModItems.CHINAGUY);
+            event.accept(ModItems.SOCIALCREDIT);
+
         }
     }
 

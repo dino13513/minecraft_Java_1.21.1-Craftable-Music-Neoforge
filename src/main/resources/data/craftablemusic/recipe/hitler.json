@@ -1,5 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_config",
+      "modid": "craftablemusic",
+      "config": "craftablemusic-server.toml",
+      "path": "items.HITLER"
+    }
+  ],
   "category": "misc",
   "ingredients": [
     {

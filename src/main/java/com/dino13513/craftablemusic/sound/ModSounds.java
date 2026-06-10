@@ -54,6 +54,7 @@ public class ModSounds {
 
     public static final DeferredHolder<SoundEvent, SoundEvent> SAXOPHONE = REGISTER("saxophone");
 
+    public static final DeferredHolder<SoundEvent, SoundEvent> REDSUNCHINA = REGISTER("red_sun_china");
 
 
 

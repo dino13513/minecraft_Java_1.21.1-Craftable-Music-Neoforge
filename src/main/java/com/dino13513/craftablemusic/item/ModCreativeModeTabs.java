@@ -24,6 +24,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.POLISH2);
                         output.accept(ModItems.KEEMSTARMUSICDISC);
                         output.accept(ModItems.ERIKAMUSICDISC);
+                        output.accept(ModItems.REDSUNMUSICDISC);
                         output.accept(ModItems.EMPTYVINYL);
                         output.accept(ModItems.EPSTEIN);
                         output.accept(ModItems.NWORD);
@@ -38,6 +39,14 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BEER);
                         output.accept(ModItems.FREDDYFAZBEAR);
                         output.accept(ModItems.SAXOPHONE);
+                        output.accept(ModItems.TIKTOK);
+                        output.accept(ModItems.TIKTOKRED);
+                        output.accept(ModItems.TIKTOKBLACK);
+                        output.accept(ModItems.TIKTOKBLUE);
+                        output.accept(ModItems.CHINAFLAG);
+                        output.accept(ModItems.CHINAGUY);
+                        output.accept(ModItems.SOCIALCREDIT);
+
                     })
                     .build());
 

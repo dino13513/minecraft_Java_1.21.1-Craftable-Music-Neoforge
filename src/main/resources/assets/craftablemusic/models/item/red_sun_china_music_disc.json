@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "craftablemusic:item/red_sun_china_music_disc"
+    }
+}

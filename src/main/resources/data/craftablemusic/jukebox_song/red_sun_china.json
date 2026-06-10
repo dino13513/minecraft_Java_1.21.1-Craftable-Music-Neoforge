@@ -1,0 +1,8 @@
+{
+  "sound_event": "craftablemusic:red_sun_china",
+  "description": {
+    "text": "Red sun in the sky"
+  },
+  "length_in_seconds": 375,
+  "comparator_output": 15
+}

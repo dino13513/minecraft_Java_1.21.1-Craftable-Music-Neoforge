@@ -3,7 +3,7 @@ import os
 
 # CONFIGURATION
 MOD_ID = "craftablemusic"
-item_names = ["BEER", "polish1_music_disc", "polish2_music_disc"]  # <-- Add all your item names here
+item_names = ["social_credit", "china_flag", "china_guy"]  # <-- Add all your item names here
 
 # The standard Minecraft item model template
 for name in item_names:

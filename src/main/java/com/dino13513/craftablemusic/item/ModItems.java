@@ -27,6 +27,14 @@ public class ModItems {
         );
     }
 
+    public static DeferredItem<Item> REGISTERCRAFTINGITEM(String name) {
+     return  ITEMS.register(name ,
+             () -> new Item(new Item.Properties()
+                     .stacksTo(64)
+             )
+             );
+    }
+
     public static final DeferredItem<Item> EFNDISC = ITEMS.register("efn_music_disc",
             () -> new Item(new Item.Properties()
                     .stacksTo(1)
@@ -75,6 +83,8 @@ public class ModItems {
     );
 
     public static final DeferredItem<Item> ERIKAMUSICDISC = registerDisc("erika");
+
+    public static final DeferredItem<Item> REDSUNMUSICDISC = registerDisc("red_sun_china");
 
     public static final DeferredItem<Item> EMPTYVINYL = ITEMS.register("empty_vinyl",
             () -> new Item(new Item.Properties()
@@ -135,7 +145,7 @@ public class ModItems {
                 )
         );
     public static final DeferredItem<Item> BEER = ITEMS.register("beer",
-            () -> new com.dino13513.craftablemusic.item.BeerItem(new Item.Properties()
+            () -> new com.dino13513.craftablemusic.item.custom.BeerItem(new Item.Properties()
                     .stacksTo(8)
                     .food(new FoodProperties.Builder()
                             .nutrition(3)
@@ -162,6 +172,20 @@ public class ModItems {
                     1.0f
             )
     );
+
+    public static final DeferredItem<Item> TIKTOKBLUE = REGISTERCRAFTINGITEM("tiktok_blue");
+
+    public static final DeferredItem<Item> TIKTOKRED = REGISTERCRAFTINGITEM("tiktok_red");
+
+    public static final DeferredItem<Item> TIKTOKBLACK = REGISTERCRAFTINGITEM("tiktok_black");
+
+    public static final DeferredItem<Item> TIKTOK = REGISTERCRAFTINGITEM("tiktok");
+
+    public static final DeferredItem<Item> CHINAFLAG = REGISTERCRAFTINGITEM("china_flag");
+
+    public static final DeferredItem<Item> CHINAGUY = REGISTERCRAFTINGITEM("china_guy");
+
+    public static final DeferredItem<Item> SOCIALCREDIT = REGISTERCRAFTINGITEM("social_credit");
 
 
     public static void register(IEventBus eventBus) {

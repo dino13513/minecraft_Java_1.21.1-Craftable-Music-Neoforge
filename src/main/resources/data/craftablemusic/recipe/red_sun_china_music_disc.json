@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "craftablemusic:empty_vinyl"
+    },
+    {
+      "item": "craftablemusic:social_credit"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "craftablemusic:red_sun_china_music_disc"
+  }
+}
