@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "your_mod_id:white_guy"
+          "id": "craftablemusic:white_guy"
         }
       ],
       "conditions": [

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_config",
+      "modid": "craftablemusic",
+      "config": "craftablemusic-server.toml",
+      "path": "items.VANILLA_CRAFTINGS"
+    }
+  ],
+  "category": "misc",
+  "key": {
+    "V": {
+      "item": "craftablemusic:empty_vinyl"
+    },
+    "O": {
+      "item": "minecraft:crying_obsidian"
+    }
+  },
+  "pattern": [
+    "OOO",
+    "OVO",
+    "OOO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:music_disc_11"
+  }
+}

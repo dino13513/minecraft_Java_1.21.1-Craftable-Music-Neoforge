@@ -73,6 +73,7 @@ public class CraftableMusic {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.EFNDISC);
             event.accept(ModItems.JAZZFNAFDISC);
+            event.accept(ModItems.FREDDYFAZBEARREMIX);
             event.accept(ModItems.POLISH1);
             event.accept(ModItems.POLISH2);
             event.accept(ModItems.KEEMSTARMUSICDISC);

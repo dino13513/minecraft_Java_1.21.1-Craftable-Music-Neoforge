@@ -10,6 +10,7 @@ public class Config {
     public static final ModConfigSpec.BooleanValue HITLER;
     public static final ModConfigSpec.BooleanValue EFNDISC;
     public static final ModConfigSpec.BooleanValue EPSTEIN;
+    private static final ModConfigSpec.BooleanValue VANILLACRAFTINGS;
 
     static {
         // Creates the "items" category group
@@ -34,6 +35,11 @@ public class Config {
                 .worldRestart()
                 .comment("Whether to enable epstein crafting recipe")
                 .define("epstein", true);
+
+        VANILLACRAFTINGS = BUILDER
+                        .worldRestart()
+                        .comment("Whether to enable craftings for every vanilla music disc")
+                        .define("VANILLA_CRAFTINGS", true);
 
         BUILDER.pop(); // Closes the "items" category group
         SPEC = BUILDER.build();

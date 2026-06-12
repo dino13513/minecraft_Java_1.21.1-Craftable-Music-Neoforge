@@ -20,6 +20,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.EFNDISC);
                         output.accept(ModItems.JAZZFNAFDISC);
+                        output.accept(ModItems.FREDDYFAZBEARREMIX);
                         output.accept(ModItems.POLISH1);
                         output.accept(ModItems.POLISH2);
                         output.accept(ModItems.KEEMSTARMUSICDISC);

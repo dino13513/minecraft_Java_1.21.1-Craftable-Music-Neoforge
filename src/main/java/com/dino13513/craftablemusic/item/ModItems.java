@@ -1,4 +1,4 @@
-package com.dino13513.craftablemusic.item;
+ package com.dino13513.craftablemusic.item;
 
 import com.dino13513.craftablemusic.CraftableMusic;
 import com.dino13513.craftablemusic.sound.ModSounds;
@@ -27,7 +27,7 @@ public class ModItems {
         );
     }
 
-    public static DeferredItem<Item> REGISTERCRAFTINGITEM(String name) {
+    public static DeferredItem<Item> registerCraftingItem(String name) {
      return  ITEMS.register(name ,
              () -> new Item(new Item.Properties()
                      .stacksTo(64)
@@ -173,19 +173,25 @@ public class ModItems {
             )
     );
 
-    public static final DeferredItem<Item> TIKTOKBLUE = REGISTERCRAFTINGITEM("tiktok_blue");
+    public static final DeferredItem<Item> TIKTOKBLUE = registerCraftingItem("tiktok_blue");
 
-    public static final DeferredItem<Item> TIKTOKRED = REGISTERCRAFTINGITEM("tiktok_red");
+    public static final DeferredItem<Item> TIKTOKRED = registerCraftingItem("tiktok_red");
 
-    public static final DeferredItem<Item> TIKTOKBLACK = REGISTERCRAFTINGITEM("tiktok_black");
+    public static final DeferredItem<Item> TIKTOKBLACK = registerCraftingItem("tiktok_black");
 
-    public static final DeferredItem<Item> TIKTOK = REGISTERCRAFTINGITEM("tiktok");
+    public static final DeferredItem<Item> TIKTOK = registerCraftingItem("tiktok");
 
-    public static final DeferredItem<Item> CHINAFLAG = REGISTERCRAFTINGITEM("china_flag");
+    public static final DeferredItem<Item> CHINAFLAG = registerCraftingItem("china_flag");
 
-    public static final DeferredItem<Item> CHINAGUY = REGISTERCRAFTINGITEM("china_guy");
+    public static final DeferredItem<Item> CHINAGUY = registerCraftingItem("china_guy");
 
-    public static final DeferredItem<Item> SOCIALCREDIT = REGISTERCRAFTINGITEM("social_credit");
+    public static final DeferredItem<Item> SOCIALCREDIT = registerCraftingItem("social_credit");
+
+    public static final DeferredItem<Item> FREDDYFAZBEARREMIX = registerDisc("freddyfazbear_remix");
+
+    public static final DeferredItem<Item> STALIN = registerCraftingItem("stalin");
+
+    public static final DeferredItem<Item> ZSRRFLAG = registerCraftingItem("zsrr_flag");
 
 
     public static void register(IEventBus eventBus) {

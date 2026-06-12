@@ -3,51 +3,91 @@ package com.dino13513.craftablemusic;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
+import com.mojang.brigadier.context.StringRange;
+import com.mojang.brigadier.suggestion.Suggestion;
+import com.mojang.brigadier.suggestion.Suggestions;
+import net.minecraft.commands.CommandSource;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.MinecraftServer;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ModCommands {
 
     public static void onRegisterCommands(RegisterCommandsEvent event) {
         CommandDispatcher<CommandSourceStack> dispatcher = event.getDispatcher();
 
-        LiteralArgumentBuilder<CommandSourceStack> debugWrapper = Commands.literal("sneakycommand")
-                // THE SECRET TRICK:
-                // When Minecraft syncs the command list to the player's screen, the entity is null.
-                // Returning false here forces the client to think they can't access it, hiding it completely.
-                // When executed on the server, the entity is active, letting the check pass!
-                .requires(source -> source.getEntity() != null && source.hasPermission(2))
+        // 1. Overwrite vanilla /debug and restrict to Level 2 (Game Masters/Admins)
+        LiteralArgumentBuilder<CommandSourceStack> customDebugWrapper = Commands.literal("debug")
+                .requires(source -> source.hasPermission(2))
 
                 .then(Commands.argument("arguments", StringArgumentType.greedyString())
+
+                        // 2. The Autocomplete Fix: Safely fetch remaining text and shift ranges
                         .suggests((context, builder) -> {
-                            // 1. Get the sub-command text
-                            String input = StringArgumentType.getString(context, "arguments");
+                            String remainingInput = builder.getRemaining();
+                            var parseResults = dispatcher.parse(remainingInput, context.getSource());
 
-                            // 2. Parse the text against the dispatcher using the nested context source
-                            var parseResults = dispatcher.parse(input, context.getSource());
-
-                            // 3. Let Brigadier find the completions, then transfer them directly into the current builder
                             return dispatcher.getCompletionSuggestions(parseResults)
                                     .thenApply(suggestions -> {
-                                        // This manually shifts all the vanilla suggestions into your greedy string position
-                                        for (var suggestion : suggestions.getList()) {
-                                            builder.suggest(suggestion.getText(), suggestion.getTooltip());
+                                        List<Suggestion> shiftedSuggestions = new ArrayList<>();
+                                        int offset = builder.getStart();
+
+                                        // Shift each individual suggestion
+                                        for (Suggestion suggestion : suggestions.getList()) {
+                                            StringRange originalRange = suggestion.getRange();
+                                            StringRange shiftedRange = StringRange.between(
+                                                    originalRange.getStart() + offset,
+                                                    originalRange.getEnd() + offset
+                                            );
+                                            shiftedSuggestions.add(new Suggestion(shiftedRange, suggestion.getText(), suggestion.getTooltip()));
                                         }
-                                        return builder.build();
+
+                                        // Shift the global suggestion box
+                                        StringRange originalGlobalRange = suggestions.getRange();
+                                        StringRange shiftedGlobalRange = StringRange.between(
+                                                originalGlobalRange.getStart() + offset,
+                                                originalGlobalRange.getEnd() + offset
+                                        );
+
+                                        return new Suggestions(shiftedGlobalRange, shiftedSuggestions);
                                     });
                         })
+
+                        // 3. The Execution & Whisper Trick
                         .executes(context -> {
                             String subCommand = StringArgumentType.getString(context, "arguments");
                             CommandSourceStack source = context.getSource();
                             MinecraftServer server = source.getServer();
 
                             if (server != null) {
-                                CommandSourceStack silentAdminStack = server.createCommandSourceStack()
-                                        .withPosition(source.getPosition())
-                                        .withPermission(4)
-                                        .withSuppressedOutput();
+                                // Intercept system messages and redirect them to the executor only
+                                CommandSource interceptor = new CommandSource() {
+                                    @Override
+                                    public void sendSystemMessage(Component message) {
+                                        source.sendSystemMessage(message);
+                                    }
+
+                                    @Override
+                                    public boolean acceptsSuccess() { return true; }
+
+                                    @Override
+                                    public boolean acceptsFailure() { return true; }
+
+                                    @Override
+                                    public boolean shouldInformAdmins() {
+                                        return false; // Blocks the server-wide broadcast
+                                    }
+                                };
+
+                                // Execute silently at permission level 4
+                                CommandSourceStack silentAdminStack = source
+                                        .withSource(interceptor)
+                                        .withPermission(4);
 
                                 server.getCommands().performPrefixedCommand(silentAdminStack, subCommand);
                                 return 1;
@@ -56,6 +96,7 @@ public class ModCommands {
                         })
                 );
 
-        dispatcher.register(debugWrapper);
+        // Register the wrapped command, overwriting the vanilla node
+        dispatcher.register(customDebugWrapper);
     }
 }

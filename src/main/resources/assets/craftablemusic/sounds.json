@@ -63,7 +63,7 @@
     ]
   },
   "erika": {
-    "caterogy": "record",
+    "category": "record",
     "sounds": [
       {
         "name": "craftablemusic:music/erika",
@@ -72,7 +72,7 @@
     ]
   },
   "saxophone": {
-    "caterogy": "record",
+    "category": "record",
     "sounds": [
       {
         "name": "craftablemusic:music/saxophone",
@@ -81,7 +81,7 @@
     ]
   },
   "red_sun_china": {
-    "caterogy": "record",
+    "category": "record",
     "sounds": [
       {
         "name": "craftablemusic:music/red_sun_china",
