@@ -25,6 +25,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.POLISH2);
                         output.accept(ModItems.KEEMSTARMUSICDISC);
                         output.accept(ModItems.ERIKAMUSICDISC);
+                        output.accept(ModItems.ZSRRMUSICDISC);
                         output.accept(ModItems.REDSUNMUSICDISC);
                         output.accept(ModItems.EMPTYVINYL);
                         output.accept(ModItems.EPSTEIN);
@@ -47,6 +48,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CHINAFLAG);
                         output.accept(ModItems.CHINAGUY);
                         output.accept(ModItems.SOCIALCREDIT);
+                        output.accept(ModItems.STALIN);
+                        output.accept(ModItems.ZSRRFLAG);
 
                     })
                     .build());

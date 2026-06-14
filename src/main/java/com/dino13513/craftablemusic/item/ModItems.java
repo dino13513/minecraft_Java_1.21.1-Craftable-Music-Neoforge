@@ -193,6 +193,7 @@ public class ModItems {
 
     public static final DeferredItem<Item> ZSRRFLAG = registerCraftingItem("zsrr_flag");
 
+    public static final DeferredItem<Item> ZSRRMUSICDISC = registerDisc("zsrr");
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

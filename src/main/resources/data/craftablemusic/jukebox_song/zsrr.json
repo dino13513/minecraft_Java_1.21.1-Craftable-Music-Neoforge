@@ -1,0 +1,8 @@
+{
+  "sound_event": "craftablemusic:zsrr",
+  "description": {
+    "text": "ZSRR"
+  },
+  "length_in_seconds": 218,
+  "comparator_output": 15
+}

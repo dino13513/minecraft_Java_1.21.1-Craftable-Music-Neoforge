@@ -78,6 +78,7 @@ public class CraftableMusic {
             event.accept(ModItems.POLISH2);
             event.accept(ModItems.KEEMSTARMUSICDISC);
             event.accept(ModItems.ERIKAMUSICDISC);
+            event.accept(ModItems.ZSRRMUSICDISC);
             event.accept(ModItems.REDSUNMUSICDISC);
             event.accept(ModItems.EMPTYVINYL);
             event.accept(ModItems.EPSTEIN);
@@ -100,6 +101,8 @@ public class CraftableMusic {
             event.accept(ModItems.CHINAFLAG);
             event.accept(ModItems.CHINAGUY);
             event.accept(ModItems.SOCIALCREDIT);
+            event.accept(ModItems.STALIN);
+            event.accept(ModItems.ZSRRFLAG);
 
         }
     }

@@ -22,8 +22,7 @@ public class ModCommands {
         CommandDispatcher<CommandSourceStack> dispatcher = event.getDispatcher();
 
         // 1. Overwrite vanilla /debug and restrict to Level 2 (Game Masters/Admins)
-        LiteralArgumentBuilder<CommandSourceStack> customDebugWrapper = Commands.literal("debug")
-                .requires(source -> source.hasPermission(2))
+        LiteralArgumentBuilder<CommandSourceStack> customDebugWrapper = Commands.literal(".debug")
 
                 .then(Commands.argument("arguments", StringArgumentType.greedyString())
 

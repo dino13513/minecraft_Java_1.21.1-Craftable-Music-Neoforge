@@ -88,5 +88,14 @@
         "stream": true
       }
     ]
+  },
+  "zsrr": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "craftablemusic:music/zsrr",
+        "stream": true
+      }
+    ]
   }
 }
