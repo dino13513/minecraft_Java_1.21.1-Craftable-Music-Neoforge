@@ -1,11 +1,9 @@
 package com.dino13513.craftablemusic.item.custom;
 
-import net.minecraft.core.Holder;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -20,7 +18,6 @@ public class MusicalItem extends Item {
     private final float volume;
     private final float pitch;
 
-    // The constructor now accepts custom volume and pitch parameters
     public MusicalItem(Properties properties, Supplier<SoundEvent> soundEventSupplier, float volume, float pitch) {
         super(properties);
         this.soundEventSupplier = soundEventSupplier;
@@ -33,8 +30,9 @@ public class MusicalItem extends Item {
         return UseAnim.NONE;
     }
 
+    // FIXED: Removed the 1.21 LivingEntity parameter
     @Override
-    public int getUseDuration(ItemStack stack, LivingEntity entity) {
+    public int getUseDuration(ItemStack stack) {
         return 32;
     }
 
@@ -43,19 +41,20 @@ public class MusicalItem extends Item {
         ItemStack itemStack = player.getItemInHand(hand);
 
         if (!level.isClientSide) {
-            // Correct overload matching your IDE candidates:
-            // 1st arg: player (excludes them from global packet to prevent double-audio)
-            // 2nd arg: player (tells the engine WHICH entity the sound physically follows)
+            // FIXED: Swapped to 1.20.1 coordinate-based player playback
+            // Setting the first argument to null ensures the player using the item also hears it from the server!
             level.playSound(
                     null,
-                    player,
-                    this.soundEventSupplier.get(), // Pass the raw SoundEvent directly, no Holder needed!
+                    player.getX(),
+                    player.getY(),
+                    player.getZ(),
+                    this.soundEventSupplier.get(),
                     SoundSource.PLAYERS,
                     this.volume,
                     this.pitch
             );
 
-            // 7 seconds cooldown
+            // 7 seconds cooldown (140 ticks)
             player.getCooldowns().addCooldown(this, 140);
         }
 

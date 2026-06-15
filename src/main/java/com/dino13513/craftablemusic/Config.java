@@ -1,19 +1,20 @@
 package com.dino13513.craftablemusic;
 
-import net.neoforged.neoforge.common.ModConfigSpec;
+// Forge 1.20.1 Config Import
+import net.minecraftforge.common.ForgeConfigSpec;
 
 public class Config {
-    private static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
-    public static final ModConfigSpec SPEC;
+    private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
+    public static final ForgeConfigSpec SPEC;
 
-    public static final ModConfigSpec.BooleanValue ERIKADISC;
-    public static final ModConfigSpec.BooleanValue HITLER;
-    public static final ModConfigSpec.BooleanValue EFNDISC;
-    public static final ModConfigSpec.BooleanValue EPSTEIN;
-    private static final ModConfigSpec.BooleanValue VANILLACRAFTINGS;
+    public static final ForgeConfigSpec.BooleanValue ERIKADISC;
+    public static final ForgeConfigSpec.BooleanValue HITLER;
+    public static final ForgeConfigSpec.BooleanValue EFNDISC;
+    public static final ForgeConfigSpec.BooleanValue EPSTEIN;
+    // Set to public so custom 1.20.1 recipe condition registration hooks can read state variables
+    public static final ForgeConfigSpec.BooleanValue VANILLA_CRAFTINGS;
 
     static {
-        // Creates the "items" category group
         BUILDER.comment("Craftable Music Item Toggles").push("items");
 
         ERIKADISC = BUILDER
@@ -36,12 +37,12 @@ public class Config {
                 .comment("Whether to enable epstein crafting recipe")
                 .define("epstein", true);
 
-        VANILLACRAFTINGS = BUILDER
-                        .worldRestart()
-                        .comment("Whether to enable craftings for every vanilla music disc")
-                        .define("VANILLA_CRAFTINGS", true);
+        VANILLA_CRAFTINGS = BUILDER
+                .worldRestart()
+                .comment("Whether to enable craftings for every vanilla music disc")
+                .define("VANILLA_CRAFTINGS", true);
 
-        BUILDER.pop(); // Closes the "items" category group
+        BUILDER.pop();
         SPEC = BUILDER.build();
     }
 }

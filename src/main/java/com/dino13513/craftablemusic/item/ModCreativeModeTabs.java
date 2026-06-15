@@ -5,52 +5,53 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredRegister;
 
-import java.util.function.Supplier;
+// Forge 1.20.1 Imports
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CraftableMusic.MOD_ID);
 
-    public static final Supplier<CreativeModeTab> CUSTOM_MUSIC_DISCS_TAB = CREATIVE_MODE_TAB.register("custom_music_discs_tab",
+    public static final RegistryObject<CreativeModeTab> CUSTOM_MUSIC_DISCS_TAB = CREATIVE_MODE_TAB.register("custom_music_discs_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.EFNDISC.get()))
                     .title(Component.translatable("creativetab.craftablemusic.custom_music_discs"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.EFNDISC);
-                        output.accept(ModItems.JAZZFNAFDISC);
-                        output.accept(ModItems.FREDDYFAZBEARREMIX);
-                        output.accept(ModItems.POLISH1);
-                        output.accept(ModItems.POLISH2);
-                        output.accept(ModItems.KEEMSTARMUSICDISC);
-                        output.accept(ModItems.ERIKAMUSICDISC);
-                        output.accept(ModItems.ZSRRMUSICDISC);
-                        output.accept(ModItems.REDSUNMUSICDISC);
-                        output.accept(ModItems.EMPTYVINYL);
-                        output.accept(ModItems.EPSTEIN);
-                        output.accept(ModItems.NWORD);
-                        output.accept(ModItems.WHITEGUY);
-                        output.accept(ModItems.POLISHFLAG);
-                        output.accept(ModItems.POLISHGUY);
-                        output.accept(ModItems.AUSTRALIANFLAG);
-                        output.accept(ModItems.AUSTRALIANPAINTER);
-                        output.accept(ModItems.HITLER);
-                        output.accept(ModItems.GERMANFLAG);
-                        output.accept(ModItems.AUSTRALIAGUY);
-                        output.accept(ModItems.BEER);
-                        output.accept(ModItems.FREDDYFAZBEAR);
-                        output.accept(ModItems.SAXOPHONE);
-                        output.accept(ModItems.TIKTOK);
-                        output.accept(ModItems.TIKTOKRED);
-                        output.accept(ModItems.TIKTOKBLACK);
-                        output.accept(ModItems.TIKTOKBLUE);
-                        output.accept(ModItems.CHINAFLAG);
-                        output.accept(ModItems.CHINAGUY);
-                        output.accept(ModItems.SOCIALCREDIT);
-                        output.accept(ModItems.STALIN);
-                        output.accept(ModItems.ZSRRFLAG);
-
+                        // Appended .get() to extract item wrappers cleanly for Forge's handler mappings
+                        output.accept(ModItems.EFNDISC.get());
+                        output.accept(ModItems.JAZZFNAFDISC.get());
+                        output.accept(ModItems.FREDDYFAZBEARREMIX.get());
+                        output.accept(ModItems.POLISH1.get());
+                        output.accept(ModItems.POLISH2.get());
+                        output.accept(ModItems.KEEMSTARMUSICDISC.get());
+                        output.accept(ModItems.ERIKAMUSICDISC.get());
+                        output.accept(ModItems.ZSRRMUSICDISC.get());
+                        output.accept(ModItems.REDSUNMUSICDISC.get());
+                        output.accept(ModItems.EMPTYVINYL.get());
+                        output.accept(ModItems.EPSTEIN.get());
+                        output.accept(ModItems.NWORD.get());
+                        output.accept(ModItems.WHITEGUY.get());
+                        output.accept(ModItems.POLISHFLAG.get());
+                        output.accept(ModItems.POLISHGUY.get());
+                        output.accept(ModItems.AUSTRALIANFLAG.get());
+                        output.accept(ModItems.AUSTRALIANPAINTER.get());
+                        output.accept(ModItems.HITLER.get());
+                        output.accept(ModItems.GERMANFLAG.get());
+                        output.accept(ModItems.AUSTRALIAGUY.get());
+                        output.accept(ModItems.BEER.get());
+                        output.accept(ModItems.FREDDYFAZBEAR.get());
+                        output.accept(ModItems.SAXOPHONE.get());
+                        output.accept(ModItems.TIKTOK.get());
+                        output.accept(ModItems.TIKTOKRED.get());
+                        output.accept(ModItems.TIKTOKBLACK.get());
+                        output.accept(ModItems.TIKTOKBLUE.get());
+                        output.accept(ModItems.CHINAFLAG.get());
+                        output.accept(ModItems.CHINAGUY.get());
+                        output.accept(ModItems.SOCIALCREDIT.get());
+                        output.accept(ModItems.STALIN.get());
+                        output.accept(ModItems.ZSRRFLAG.get());
                     })
                     .build());
 

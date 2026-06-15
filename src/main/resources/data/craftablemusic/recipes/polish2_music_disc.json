@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "craftablemusic:polish_guy"
+    },
+    {
+      "item": "craftablemusic:beer"
+    },
+    {
+      "item": "craftablemusic:empty_vinyl"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "craftablemusic:polish2_music_disc"
+  },
+  "conditions": [
+    {
+      "type": "craftablemusic:vanilla_craftings"
+    }
+  ]
+}

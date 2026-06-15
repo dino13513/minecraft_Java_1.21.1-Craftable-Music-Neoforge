@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_config",
+      "modid": "craftablemusic",
+      "config": "craftablemusic-server.toml",
+      "path": "items.VANILLA_CRAFTINGS"
+    }
+  ],
+  "category": "misc",
+  "key": {
+    "V": {
+      "item": "craftablemusic:empty_vinyl"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "R R",
+    " V ",
+    "R R"
+  ],
+  "result": {
+    "count": 1,
+    "item": "minecraft:music_disc_chirp"
+  },
+  "conditions": [
+    {
+      "type": "craftablemusic:vanilla_craftings"
+    }
+  ]
+}

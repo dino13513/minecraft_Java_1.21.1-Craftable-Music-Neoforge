@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:leather_helmet"
+    },
+    "S": {
+      "item": "minecraft:white_wool"
+    },
+    "A": {
+      "item": "minecraft:iron_boots"
+    }
+  },
+  "pattern": [
+    "  C",
+    "  S",
+    "  A"
+  ],
+  "result": {
+    "count": 1,
+    "item": "craftablemusic:white_guy"
+  },
+  "conditions": [
+    {
+      "type": "craftablemusic:vanilla_craftings"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "minecraft:white_wool"
+    },
+    "C": {
+      "item": "minecraft:red_wool"
+    }
+  },
+  "pattern": [
+    "   ",
+    "SSS",
+    "CCC"
+  ],
+  "result": {
+    "count": 1,
+    "item": "craftablemusic:polish_flag"
+  },
+  "conditions": [
+    {
+      "type": "craftablemusic:vanilla_craftings"
+    }
+  ]
+}

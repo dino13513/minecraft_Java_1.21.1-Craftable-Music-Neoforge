@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "craftablemusic:tiktok_black"
+    },
+    {
+      "item": "craftablemusic:tiktok_red"
+    },
+    {
+      "item": "craftablemusic:tiktok_blue"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "craftablemusic:tiktok"
+  },
+  "conditions": [
+    {
+      "type": "craftablemusic:vanilla_craftings"
+    }
+  ]
+}

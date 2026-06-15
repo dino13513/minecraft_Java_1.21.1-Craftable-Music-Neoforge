@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "craftablemusic:saxophone"
+    },
+    {
+      "item": "craftablemusic:freddyfazbear"
+    },
+    {
+      "item": "craftablemusic:empty_vinyl"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "craftablemusic:jazz_fnaf_music_disc"
+  },
+  "conditions": [
+    {
+      "type": "craftablemusic:vanilla_craftings"
+    }
+  ]
+}

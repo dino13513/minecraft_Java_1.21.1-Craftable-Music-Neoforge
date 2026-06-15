@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "craftablemusic:china_guy"
+    },
+    {
+      "item": "craftablemusic:tiktok"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "craftablemusic:social_credit"
+  },
+  "conditions": [
+    {
+      "type": "craftablemusic:vanilla_craftings"
+    }
+  ]
+}

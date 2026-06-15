@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "craftablemusic:white_guy"
+    },
+    {
+      "item": "craftablemusic:australian_flag"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "craftablemusic:australian_guy"
+  },
+  "conditions": [
+    {
+      "type": "craftablemusic:vanilla_craftings"
+    }
+  ]
+}
