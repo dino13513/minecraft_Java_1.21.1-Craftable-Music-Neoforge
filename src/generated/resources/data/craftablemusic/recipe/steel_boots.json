@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "craftablemusic:config_condition",
+      "config_key": "STEEL"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "craftablemusic:steel_ingot"
+    }
+  },
+  "pattern": [
+    "   ",
+    "S S",
+    "S S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "craftablemusic:steel_boots"
+  }
+}

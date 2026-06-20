@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "craftablemusic:config_condition",
+      "config_key": "zsrrMusicDisc"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_emptyvinyl": {
+      "conditions": {
+        "items": [
+          {
+            "items": "craftablemusic:empty_vinyl"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "craftablemusic:zsrr_music_disc"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_emptyvinyl"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "craftablemusic:zsrr_music_disc"
+    ]
+  }
+}

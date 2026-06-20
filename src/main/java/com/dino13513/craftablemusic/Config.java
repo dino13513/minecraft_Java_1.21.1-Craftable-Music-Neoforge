@@ -10,7 +10,11 @@ public class Config {
     public static final ModConfigSpec.BooleanValue HITLER;
     public static final ModConfigSpec.BooleanValue EFNDISC;
     public static final ModConfigSpec.BooleanValue EPSTEIN;
-    private static final ModConfigSpec.BooleanValue VANILLACRAFTINGS;
+    public static final ModConfigSpec.BooleanValue VANILLACRAFTINGS;
+
+    public static final ModConfigSpec.BooleanValue ZSRRDISC;
+
+    public static final ModConfigSpec.BooleanValue STEEL;
 
     static {
         // Creates the "items" category group
@@ -40,6 +44,14 @@ public class Config {
                         .worldRestart()
                         .comment("Whether to enable craftings for every vanilla music disc")
                         .define("VANILLA_CRAFTINGS", true);
+        ZSRRDISC = BUILDER
+                                .worldRestart()
+                                .comment("Whether to enable crafting zsrr anthem disc")
+                                .define("zsrrMusicDisc", true);
+        STEEL = BUILDER
+                                        .worldRestart()
+                                        .comment("Whether to enable obtaining anything related to steel")
+                                        .define("STEEL", true);
 
         BUILDER.pop(); // Closes the "items" category group
         SPEC = BUILDER.build();

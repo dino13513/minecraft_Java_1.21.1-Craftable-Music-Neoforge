@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 400,
+  "experience": 1.0,
+  "group": "steel",
+  "ingredient": {
+    "item": "craftablemusic:raw_steel"
+  },
+  "result": {
+    "count": 1,
+    "id": "craftablemusic:steel_ingot"
+  }
+}

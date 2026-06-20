@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "craftablemusic:config_condition",
+      "config_key": "EfnMusicDisc"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "craftablemusic:epstein"
+    },
+    {
+      "item": "craftablemusic:nword"
+    },
+    {
+      "item": "craftablemusic:empty_vinyl"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "craftablemusic:efn_music_disc"
+  }
+}

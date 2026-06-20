@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "craftablemusic:config_condition",
+      "config_key": "HITLER"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "craftablemusic:australian_painter"
+    },
+    {
+      "item": "craftablemusic:german_flag"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "craftablemusic:hitler"
+  }
+}

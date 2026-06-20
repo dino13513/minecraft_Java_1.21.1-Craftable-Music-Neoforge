@@ -3,6 +3,7 @@ package com.dino13513.craftablemusic;
 import com.dino13513.craftablemusic.block.ModBlocks;
 import com.dino13513.craftablemusic.item.ModCreativeModeTabs;
 import com.dino13513.craftablemusic.item.ModItems;
+import com.dino13513.craftablemusic.recipe.ModConditions;
 import com.dino13513.craftablemusic.sound.ModSounds;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
@@ -50,6 +51,10 @@ public class CraftableMusic {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModConditions.register(modEventBus);
+        // Register our mod's ModConfigSpec so that FML can create and load the config file for us
+        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
         NeoForge.EVENT_BUS.addListener(com.dino13513.craftablemusic.ModCommands::onRegisterCommands);
         ModCreativeModeTabs.register(modEventBus);
 
@@ -60,8 +65,7 @@ public class CraftableMusic {
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
-        // Register our mod's ModConfigSpec so that FML can create and load the config file for us
-        modContainer.registerConfig(ModConfig.Type.SERVER, Config.SPEC);
+
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
@@ -103,6 +107,14 @@ public class CraftableMusic {
             event.accept(ModItems.SOCIALCREDIT);
             event.accept(ModItems.STALIN);
             event.accept(ModItems.ZSRRFLAG);
+            event.accept(ModItems.RAWSTEEL);
+            event.accept(ModItems.STEELINGOT);
+            event.accept(ModBlocks.STEELORE);
+            event.accept(ModBlocks.DEEPSLATESTEELORE);
+            event.accept(ModItems.STEELHELMET);
+            event.accept(ModItems.STEELCHESTPLATE);
+            event.accept(ModItems.STEELLEGGINS);
+            event.accept(ModItems.STEELBOOTS);
 
         }
     }

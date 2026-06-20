@@ -6,6 +6,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -194,6 +195,26 @@ public class ModItems {
     public static final DeferredItem<Item> ZSRRFLAG = registerCraftingItem("zsrr_flag");
 
     public static final DeferredItem<Item> ZSRRMUSICDISC = registerDisc("zsrr");
+
+    public static final DeferredItem<Item> RAWSTEEL = registerCraftingItem("raw_steel");
+
+    public static final DeferredItem<Item> STEELINGOT = registerCraftingItem("steel_ingot");
+
+    public static final DeferredItem<ArmorItem> STEELHELMET = ITEMS.register("steel_helmet",
+            () -> new ArmorItem(ModArmorMaterials.STEEL_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties().durability(387))
+    );
+
+    public static final DeferredItem<ArmorItem> STEELCHESTPLATE = ITEMS.register("steel_chestplate",
+                () -> new ArmorItem(ModArmorMaterials.STEEL_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(548))
+        );
+
+    public static final DeferredItem<ArmorItem> STEELLEGGINS = ITEMS.register("steel_leggings",
+                () -> new ArmorItem(ModArmorMaterials.STEEL_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Properties().durability(535))
+        );
+
+    public static final DeferredItem<ArmorItem> STEELBOOTS = ITEMS.register("steel_boots",
+                () -> new ArmorItem(ModArmorMaterials.STEEL_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Properties().durability(443))
+        );
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

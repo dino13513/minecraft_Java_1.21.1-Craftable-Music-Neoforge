@@ -30,7 +30,10 @@
   "item.craftablemusic.social_credit": "Chinese Music",
   "item.craftablemusic.stalin": "Stalin",
   "item.craftablemusic.zsrr_flag": "ZSRR Flag",
-  "item.craftablemusic.zsrr_music_disc": "ZSRR Music Disc",
+  "item.craftablemusic.steel_ingot": "Steel Ingot",
+  "item.craftablemusic.raw_steel": "Raw Steel",
+  "item.craftablemusic.steel_ore": "Steel Ore",
+  "item.craftablemusic.deepslate_steel_ore": "Deepslate Steel Ore",
 
   "creativetab.craftablemusic.custom_music_discs": "Craftable Music"
 }

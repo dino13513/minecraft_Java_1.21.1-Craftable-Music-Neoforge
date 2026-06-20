@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "craftablemusic:config_condition",
+      "config_key": "zsrrMusicDisc"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "craftablemusic:stalin"
+    },
+    {
+      "item": "craftablemusic:empty_vinyl"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "craftablemusic:zsrr_music_disc"
+  }
+}

@@ -1,6 +1,7 @@
 package com.dino13513.craftablemusic.item;
 
 import com.dino13513.craftablemusic.CraftableMusic;
+import com.dino13513.craftablemusic.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -50,6 +51,14 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SOCIALCREDIT);
                         output.accept(ModItems.STALIN);
                         output.accept(ModItems.ZSRRFLAG);
+                        output.accept(ModItems.RAWSTEEL);
+                        output.accept(ModItems.STEELINGOT);
+                        output.accept(ModBlocks.STEELORE);
+                        output.accept(ModBlocks.DEEPSLATESTEELORE);
+                        output.accept(ModItems.STEELHELMET);
+                        output.accept(ModItems.STEELCHESTPLATE);
+                        output.accept(ModItems.STEELLEGGINS);
+                        output.accept(ModItems.STEELBOOTS);
 
                     })
                     .build());
